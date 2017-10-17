@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no" name="format-detection">
+<meta content="email=no" name="format-detection">
+<meta name="msapplication-tap-highlight" content="no">
+<title>玩游戏赢大奖</title>
+<link rel="stylesheet" href="css/m.css">
+<script src="js/jquery-2.1.1.min.js"></script>
+<script>
+window.onload=function(){
+};
+</script>
+
+</head>
+<body onload="init()">
+<div class="grid">
+  <div class="page hide" id="loading"> loading... </div>
+  <div class="page hide" id="index">
+  	
+  	<img class="hd" src="img/hd.png" />
+    <div class="btns">
+    	<img src="img/LOGO.png" width="100px" style="display: block; margin: 0 auto;"/>
+     <!-- <button data-type="color" class="btn play-btn"> 开始游戏 </button>-->
+      <img class="btn play-btn" src="img/bt1.png"  />
+      <p>已有<span>10</span>人参加活动</p>
+    </div>
+    
+  </div>
+  <div class="page hide" id="room">
+  	<img class="music_1 m1" src="img/music-open.gif"/>
+  	<img class="music_1 m2" src="img/music-close.png"/>
+  	<audio id="myAudio"  autoplay loop>
+  		<source src="sound/music.mp3"></source>
+  	</audio>
+    <header>
+    		<span class="lv">
+    			<img class="portrait" src="img/b1.png"/><em> 0 </em> 
+    		</span>
+    		<div class="sj">
+    			<p>时间</p>
+    			<span class="time">30</span>
+    		</div>
+    </header>
+    
+    <div id="box" class="lv1"> </div>
+    <img src="img/LOGO.png" style="width: 70px; position: absolute; bottom: 20px; left: 50%; margin-left: -35px;"/>
+  </div>
+  
+  <div class="page hide" id="dialog">
+  	<div style=" width:100%; height:100%; position:absolute;background:rgba(0,0,0,0.7);">
+  		<div class="resule-bgLight" style="display: block;"></div>
+	  	<div class="dia2"></div>
+	  	<p class="success"></p>
+	  	
+	  	<!--<div id="resule-status-head">
+             <div class="resule-status-userImg one" style="border-color: rgb(112, 213, 114);">
+             	<img src="//hdg.faisys.com/image/manImg.jpg">
+             </div>
+        </div>-->
+	  	<div class="details">
+	  		<p>你的成绩为:<span> 0</span>分</p>
+	  		<p>成功击败全国<span>10%</span>的玩家</p>
+	  		<p>最佳成绩为:<span> 60</span>分</p>
+	  		<p>最佳排名为: NO.5</p>
+	  		<p>今天还有<span> 1 </span>次机会抽奖</p>
+	  		<button class="btn0">赶紧去抽奖</button>
+	  		<button class="btn1">排行榜</button>
+	  		<button class="btn2 btn-restart">在玩一次</button>
+	  	</div>
+  	</div>
+  	<div class="cj">
+  		<div></div>
+  	</div>
+  	<div class="cj_1">
+  		<img src="img/mzj.png" />
+  		
+  		<a href="index.html"><button>返回首页</button></a>
+  		<button class="gz">关注我们</button>
+  	</div>
+  	<div class="cj_2">
+  		<p class="get">恭喜你获得了</p>
+  		<div class="resule"></div>
+  		<img src="img/gift.png" />
+  		<div class="gitf">
+  			<p>一等奖</p>
+  			<p>价值100元礼品</p>
+  			<p class="under">点击查看奖品详情</p>
+  		</div>
+  		<button class="gz">关注我们</button>
+  	</div>
+  	</div>
+  <div class="page hide" id="dialog1">
+  	<div style=" width:100%; height:100%; position:absolute;background:rgba(0,0,0,0.7);">
+	  	<div class="dia2"></div>
+	  	<p class="success"></p>
+	  	
+	  	<div class="details">
+	  		<p>你的成绩为:<span> 0</span>分</p>
+	  		<p>成绩必须达到30分才能抽奖</p>
+	  		<p>最佳成绩为:<span> 60</span>分</p>
+	  		<p>最佳排名为: NO.5</p>
+	  		<button class="btn0 btn-restart">再玩一次</button>
+	  		<button class="btn1">排行榜</button>
+	  		<a href="index.html"><button class="btn2">返回首页</button></a>
+	  	</div>
+  	</div>
+  	
+  </div>
+  
+   <div class="hdy">
+   		<ol class="ol_t">
+   			<li class="active">活动说明<span></span></li>
+   			<li>排行榜<span></span></li>
+   			<li>我的奖品</li>
+   			<div class="bt_fl">×</div>
+   		</ol>
+   		<div class="ut">
+   			<ul  class="cur">
+   				<li class="cur_1">
+   					<button>活动奖品</button>
+   					<p>一等奖：价值100元礼品</p>
+   					<p>一等奖：价值50元礼品</p>
+   					<p>一等奖：价值10元礼品</p>
+   					<button>活动时间</button>
+   					<p>2016年4月21日 17:36-2016年4月28日 17:36</p>
+   					<button>主办单位</button>
+   					<p>本次活动主办单位为 <span style="color: yellow;">街多多</span></p>
+   					<p>主办单位在法律允许的范围内拥有活动解释权</p>
+   				</li>
+   			</ul>
+   			<ul>
+   				<div class="bag">
+					<div class="head">
+						<div class="rich">
+					    		当前排名:<span>4</span>位(只显示前100名)
+					    </div>
+					</div>
+					<ul>
+						<li class="solid">
+							<span class="li_ct">排行</span> 
+							<span class="li_ct2">头像</span>
+							<span class="wx_name">昵称</span>
+							<div>成绩</div>
+						</li>
+					</ul>
+					
+					<ul>
+					    <li>
+					        <span class="li_ct">NO.1</span> 
+					        <img src="img/backgr.jpg"/> 
+					        <span class="wx_name">快到碗里来</span>
+					        <div><span>5</span>分</div>
+					    </li>
+					    <li>
+					        <span class="li_ct">NO.100</span> 
+					        <img src="img/backgr.jpg"/> 
+					        <span class="wx_name">爱睡觉的鱼</span>
+					        <div><span>5000</span>分</div>
+					    </li>
+					    <li>
+					        <span class="li_ct">NO.1</span> 
+					        <img src="img/backgr.jpg"/> 
+					        <span class="wx_name">傻笑</span>
+					        <div><span>500</span>分</div>
+					    </li>
+					    <li>
+					        <span class="li_ct">NO.1</span> 
+					        <img src="img/backgr.jpg"/> 
+					        <span class="wx_name">吹牛逼不打草稿</span>
+					        <div><span>500</span>分</div>
+					    </li>
+					    <li>
+					        <span class="li_ct">NO.1</span> 
+					        <img src="img/backgr.jpg"/> 
+					        <span class="wx_name">奇幻森林</span>
+					        <div><span>500</span>分</div>
+					    </li>
+					    <li>
+					        <span class="li_ct">NO.1</span> 
+					        <img src="img/backgr.jpg"/> 
+					        <span class="wx_name">最好的我们</span>
+					        <div><span>500</span>分</div>
+					    </li>
+					    <li>
+					        <span class="li_ct">NO.1</span> 
+					        <img src="img/backgr.jpg"/> 
+					        <span class="wx_name">天下无贼</span>
+					        <div><span>500</span>分</div>
+					    </li>
+					    <li>
+					        <span class="li_ct">NO.1</span> 
+					        <img src="img/backgr.jpg"/> 
+					        <span class="wx_name">一叶枫翎</span>
+					        <div><span>500</span>分</div>
+					    </li>
+					    <li>
+					        <span class="li_ct">NO.1</span> 
+					        <img src="img/backgr.jpg"/> 
+					        <span class="wx_name">一曲忧伤</span>
+					        <div><span>500</span>分</div>
+					    </li>
+					    <li>
+					        <span class="li_ct">NO.1</span> 
+					        <img src="img/backgr.jpg"/> 
+					        <span class="wx_name">三英战吕布</span>
+					        <div><span>500</span>分</div>
+					    </li>
+					    <li class="myself">
+					        <span class="li_ct">NO.10</span> 
+					        <img src="img/6_3.png"/> 
+					        <span class="wx_name">诛颜良斩文丑</span>
+					        <div><span>500</span>分</div>
+					    </li>
+					</ul>
+					</div>
+   			</ul>
+   			<ul id="jp">
+   				<li>
+   					<div class="djqImgBox"></div>
+   					<p>一等奖：价值<span>100</span>元礼品</p>
+   					<p>兑换期限：<span>2016.04.25</span>至<span>2016.05.02</span></p>
+   					<p class="dh">未兑换</p>
+   				</li>
+   				<li>
+   					<div class="djqImgBox"></div>
+   					<p>一等奖：价值<span>100</span>元礼品</p>
+   					<p>兑换期限：<span>2016.04.25</span>至<span>2016.05.02</span></p>
+   					<p class="dh">未兑换</p>
+   				</li>
+   				<li>
+   					<div class="djqImgBox"></div>
+   					<p>一等奖：价值<span>100</span>元礼品</p>
+   					<p>兑换期限：<span>2016.04.25</span>至<span>2016.05.02</span></p>
+   					<p class="dh">未兑换</p>
+   				</li>
+   			</ul>
+   		</div>
+   </div>
+</div> 
+<script type="text/javascript">
+	var h=$(window).height();
+	var th=h-50+"px";
+	$(".ut").css("height",th);
+	$(".bt_fl").click(function(){
+		$(".hdy").hide();
+	});
+	$(".hd").click(function(){
+		$(".hdy").show();
+	});
+	$(".btn1").click(function(){
+		$(".hdy").show();
+	});
+	$(".under").click(function(){
+		$(".hdy").show();
+	});
+	
+	var aLi=$(".ol_t li");
+	var oUl=$(".ut");
+	var aUl=oUl.children();
+	
+	for(var i=0; i<aLi.length; i++){
+		aLi[i].index=i;
+		aLi[i].onclick=function(){
+			for(var i=0; i<aLi.length; i++){
+				aLi[i].className="";
+				aUl[i].className="";
+			}
+			this.className="active";
+			aUl[this.index].className="cur";
+		};
+	}
+		var SHAKE_THRESHOLD = 3000;  
+        var last_update = 0;  
+        var x = y = z = last_x = last_y = last_z = 0;
+        var m = 0;
+        	function init() {  
+　			//if($(".cj").is(":visible")){
+			if (window.DeviceMotionEvent) {  
+                $(".btn0").click(function(){
+                		$(".cj").show();
+					a=2;
+					
+					alert(1);
+					if(a==2){window.addEventListener('devicemotion', deviceMotionHandler, false);}
+				}); 
+            } else {  
+                	//alert('您好，你目前所用的设置好像不支持重力感应哦！'); 
+            }			
+        		//}
+              
+        }
+        	
+		var x =document.getElementById("myAudio");
+		
+		$(".m1").click(function(){
+			//alert(2)
+			$(".m1").hide();
+			$(".m2").show();
+			x.pause(); 
+		});
+		$(".m2").click(function(){
+			//alert(2)
+			$(".m2").hide();
+			$(".m1").show();
+			x.play(); 
+		});
+		
+		
+		
+        function deviceMotionHandler(eventData) {
+        		
+            var acceleration = eventData.accelerationIncludingGravity;  
+            var curTime = new Date().getTime();  
+            if ((curTime - last_update) > 100) {  
+                var diffTime = curTime - last_update;  
+                last_update = curTime; 
+                x = acceleration.x;  
+                y = acceleration.y;  
+                z = acceleration.z;  
+                var speed = Math.abs(x + y + z - last_x - last_y - last_z) / diffTime * 10000;  
+  
+                if (speed > SHAKE_THRESHOLD) {
+                	m += 1;
+                	if(m == 1){
+					//播放音效
+					shakeAudio.play();
+                		setTimeout(function(){
+                			alert("摇动了")
+                			$(".cj").css("display","none");
+                			//$(".cj_1").show();
+                			$(".cj_2").show();
+                		},3000);
+                	}
+                		
+                		
+                }  
+                last_x = x;  
+                last_y = y;  
+                last_z = z;  
+            }  
+        }
+        			//预加摇一摇声音
+			var shakeAudio = new Audio();
+			    shakeAudio.src = 'sound/shake_sound.mp3';
+			var shake_options = {
+			    preload  : 'auto'
+			}
+			for(var key in shake_options){
+			    if(shake_options.hasOwnProperty(key) && (key in shakeAudio)){
+			        shakeAudio[key] = shake_options[key];
+			    }
+			}
+
+</script>
+<script src="js/libs.min.js?a=1111"></script>
+<script src="js/main.min.js?ver=1.11.41"></script>
+</body>
+</html>

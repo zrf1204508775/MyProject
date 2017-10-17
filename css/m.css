@@ -1,0 +1,199 @@
+@charset "utf-8";
+/* CSS Document */
+a{ text-decoration:none; border:none;}
+ul,ol,li{ margin: 0; padding: 0; list-style: none;}
+input,button{ outline:none; border:none;}
+input[type=button], input[type=submit], input[type=file], button { cursor:pointer; -webkit-appearance:none;} 
+img{ border:none;}
+
+body{ width: 100%; height: 100%; background: white; color: #fff; font: 12px/1.5 '微软雅黑'; overflow: hidden;}
+body>a{ display: none; }
+.page{ position: absolute;  top: 0;  left: 0; width: 100%; height: 100%; background:url(../img/b2.png) no-repeat; background-size: 100%;}
+.hide{display: none;}
+.hd{ width: 66; height: 72px; position: absolute; right: 0; top: 0;}
+
+#loading{display: block; font-size: 30px; line-height: 500px; text-align: center;  color: #fff;}
+#index h1{text-align: center;  font-size: 30px; padding: 30px 0;text-shadow:1px 1px 1px #AB3C3C; }
+#index .btns{ text-align: center; position: absolute; bottom: 10px; height: 210px; width: 100%; color: #ddd;}
+#index .btns p{ width: 100%; color: white; font-weight: bold;}
+
+#room header{  width: 100%; height: 50px;  line-height: 50px;  text-align: center; font-size: 16px;  color: #FFA1A1; position: relative;}
+.music_1{ width: 40px; height: 40px; float:right; margin: 10px 10px 0 0;}
+.m1{ display: block;}
+.m2{ display: none;}
+
+#room header .lv{ position: absolute; width: 80px;height: 50px; left: 10px;  top: 0;}
+#room header .lv em{font-style: normal; color: white;float: left;margin-left:5px;}
+#room header .lv .portrait{width: 40px; height: 40px; display: inline-block; border-radius: 50%; margin-top: 5px;  float: left; border: 2px solid white;}
+.sj{ display: inline-block; width: 60px; height: 50px; line-height: normal;  color: white; position: absolute; left: 50%; margin-left: -30px;}    
+
+#room header .btn-pause{ position: absolute;  top: 5px;  right: 10px; height: 40px; width: 60px;  line-height: 40px; padding: 0; margin: 0;  color: #fff;}
+#room header .time{ font-size: 20px; font-weight: bold; color: #fff; padding: 0 10px;}
+#room header .time.danger{ color: #fff;}
+#help{ height: 30px; font-size: 16px;  color: #FFA1A1; text-align: center;}
+
+#box{ position: absolute; top: 50px; right: 0;bottom: 0; left: 0; margin: auto; background-color: #fff; border-radius: 10px;padding: 10px;}
+#box span{display: block; float: left; border-radius: 10px;   cursor: pointer; border: 5px solid #fff; -webkit-box-sizing: border-box;  -moz-box-sizing: border-box;box-sizing: border-box;}
+
+#box.lv2 span{width: 50%;height: 50%;}
+#box.lv3 span{ width: 33.33%;  height: 33.33%;}
+#box.lv4 span{ width: 25%; height: 25%;}
+#box.lv5 span{ width: 20%;  height: 20%;  border-width: 3px;}
+#box.lv6 span{ width: 16.666%;  height: 16.666%;  border-width: 3px;}
+#box.lv7 span{width: 14.28%;  height: 14.28%;  border-width: 3px;}
+#box.lv8 span{width: 12.5%; height: 12.5%; border-width: 3px;}
+#box.lv9 span{width: 11.111%; height: 11.111%; border-width: 3px;}
+#box span img{ width: 100%;}
+
+#dialog{background: url(../img/b2.png) no-repeat; background-size: 100% 100%; box-sizing: border-box;  -webkit-box-sizing: border-box; }
+#dialog .inner{ height: 100%; width: 100%; text-align: center; font-size: 20px;}
+#dialog .inner .content{ padding-top: 50px;}
+#dialog .inner h3{ line-height: 60px; font-size: 40px;margin: 0; color: #321;}
+#dialog .inner .pause h3{color: #FFE2C5;}
+#dialog .inner .btn{ margin: 15px auto;}
+
+#dialog .inner p{ margin: 0;}
+#dialog .dia2{ width: 50px; height: 50px; border: 2px solid #70D572; border-radius: 50%; background: url(../img/b1.png) no-repeat; background-size: 100% 100%; margin: 30px auto 0; position: relative; top: 5px;}
+.resule-bgLight {
+    width: 16rem;
+    height: 16rem;
+    background-image:url(../img/light.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position:absolute;
+    left: 50%;
+    margin-left: -8rem;
+    border-radius: 50%;
+    top: -4rem;
+    animation: 9.5s linear 0s normal none infinite rotate;
+    -webkit-animation: 9.5s linear 0s normal none infinite rotate;
+}
+@keyframes rotate{
+	from{-webkit-transform:rotate(0deg)}
+	to{-webkit-transform:rotate(360deg)}
+}
+@-webkit-keyframes rotate{
+	from{-webkit-transform:rotate(0deg)}
+	to{-webkit-transform:rotate(360deg)}
+}
+.resule {
+    width: 500px;
+    height: 500px;
+    background-image:url(../img/light.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position:absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -250px;
+    border-radius: 50%;
+    margin-top: -290px;
+    animation: 9.5s linear 0s normal none infinite rotate;
+    -webkit-animation: 9.5s linear 0s normal none infinite rotate;
+}
+
+#dialog .success{ width: 13.3rem; height: 4.2rem; margin: auto; background: url(../img/success1.png) no-repeat; background-size: 100% 100%;}
+#dialog .details{ width: 100%; text-align: center; font-weight: normal;}
+#dialog .details p{ font-size: 18px;}
+#dialog .details button{color: white; font-size: 16px; padding: 0; font-weight: normal; font-family:"微软雅黑"; border-radius: 7px; border: none; cursor: pointer;}
+#dialog .details .btn0{ width: 200px; height: 40px; background-color:darkorange;  display: block; margin: 0 auto;  }
+#dialog .details .btn1{ width: 90px; height: 40px; background-color:#16A903;  display: inline-block; margin: 5px;  }
+#dialog .details .btn2{ width: 90px; height: 40px; background-color:#16A903;  display: inline-block; margin: 5px;  }
+
+.btn { display: inline-block;  margin: 5% 30px 10px; position: relative;  height: 100px; width: 100px;}
+.btn.btn-bottom{position: absolute; width: 300px; padding: 0;bottom: 20px; left: 50%; margin-left: -150px;}
+.btn-wrap .boyaa-logo{display:block; height: 50px;width: 100px; margin: 0 auto; -webkit-tap-highlight-color:rgba(0,0,0,0);}
+.btn-wrap .boyaa-logo img{ max-width: 100%;}
+
+@media all and (orientation:landscape) {
+	#room header{height: 100%;width: 80px; }
+	#room header .lv{ left: 0; }
+	#room header .time{ display: inline-block; height: 50px; width: 100%; padding: 0; position: absolute; top: 50%; left: 0; margin-top: -25px; }
+	#room header .btn-pause{top: auto; bottom: 15px; }
+	#box{op: 0; left: 80px;  }
+	#dialog{  padding-top: 0;  padding-left: 80px; }
+	#dialog .inner .content{ padding-top: 100px; }
+}
+@media all and (max-width: 361px){
+    #box.lv1 span,#box.lv2 span,#box.lv3 span,#box.lv4 span{ border-width: 2px;  border-radius: 5px; }
+    #box.lv5 span,#box.lv6 span,#box.lv7 span,#box.lv8 span,#box.lv9 span{ border-radius: 3px;}
+}
+
+.btn-boyaa{ text-decoration: none;}
+.btn-boyaa img{height: 30px; width: 30px; vertical-align: middle; margin-left: 10px;}
+
+.hdy{ width: 100%; height: 100%; background: rgba(0,0,0,0.8); position: absolute; top: 0; left: 0; display: none;}
+.hdy .ol_t{ width: 100%; height: 50px; border-bottom: 1px solid white;}
+.hdy .ol_t li{ width: 30%; height: 50px; line-height: 50px; color: white; float: left; text-align: center;}
+.hdy .ol_t .active{ background: url(../img/bt.png) no-repeat; background-size: 80% 8px; background-position:bottom center;}
+.hdy .ol_t li span{ width: 1px; height:20px; background: white; float: right; margin-top: 15px;}
+.hdy .ol_t .bt_fl{ width:10%; height:50px; line-height: 50px; float:right; font-size: 25px; color:white;}
+.hdy .ut{ width: 100%; height: 100%; overflow-x: scroll;}
+.hdy .ut .bag{width:100%; height: 100%; overflow-y: scroll;}
+.hdy .ut .head{ width:100%; height:50px; line-height:50px;}
+.hdy .ut .head .rich{width:95%; height:50px; margin:0 auto; color:#fff;}
+.hdy .ut .head .rich span{ margin-left:10px;}
+
+.hdy .ut ul li.solid{ border: none;}
+.hdy .ut ul{width:100%; display: none;}
+.hdy .ut ul ul{width:100%; display: block;}
+.hdy .ut ul.cur{width:100%; display: block;}
+.hdy .ut ul li{ width:85%; height:44px; line-height:44px;  margin:0 auto; border-bottom:1px solid #fff; color:white; font-size:12px; font-weight:bold;}
+.hdy .ut ul li img{ width:34px; height:34px; margin:7px 7px 0 0; border-radius:50%; float:left; margin-left: 20px;}
+.hdy .ut ul li .li_ct{ width:46px; float:left; font-size:12px; text-align: center;}
+.hdy .ut ul li .li_ct2{ width:46px; float:left; font-size:12px; text-align: center; margin-left: 20px;}
+.hdy .ut ul li div{width:50px; float:right; text-align: center;}
+.hdy .ut ul li .wx_name{ display:inline-block; width:100px; text-align: center; margin-left: 10px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+
+.hdy .ut ul .cur_1{ width: 100%; height: auto; border: none; line-height:normal; font-weight: normal;}
+.hdy .ut ul .cur_1 button{ width: 100px; height: 36px; display:block; margin: 10px; background-color: white; font-size: 16px; color: #5B5757; font-weight: normal;}
+.hdy .ut ul .cur_1 p{ height: 20px; margin: 0; padding: 0; font-family: '微软雅黑'; margin-left: 10px; color: #B9B9B9;}
+
+/*抽奖*/
+#dialog .cj{width:100%; height:100%; position:absolute;background:rgba(0,0,0,0.7);  top: 0; left: 0; display: none;}
+#dialog .cj div{ width: 100%; height:100%; background: url(../img/cj.png) no-repeat; background-size: 70%; background-position: center center;}
+#dialog .cj_1{width:100%; height:100%; overflow: hidden; position:absolute;background:rgba(0,0,0,0.7);  top: 0; left: 0; display: none;}
+#dialog .cj_1 img{ width:270px; height:350px; position: absolute; left: 50%; top: 50%; margin-left: -150px; margin-top: -200px;}
+#dialog .cj_1 button{ width: 200px; height: 40px; border-radius: 7px; background: #41bd43; color: white; font-size: 16px; margin: 0 auto; display: block; position: absolute; bottom: 100px; left: 50%; margin-left: -100px;}
+#dialog .cj_1 .gz{ bottom: 46px;}
+
+#dialog .cj_2{width:100%; height:100%; overflow: hidden; position:absolute;background:rgba(0,0,0,0.7);  top: 0; left: 0; display: none;}
+#dialog .cj_2 p.get{ text-align: center; font-size: 16px; color: white; margin-top: 90px; font-weight: bold;}
+#dialog .cj_2 img{ width:120px; height:120px; position: absolute; left: 50%; top: 50%; margin-left: -60px; margin-top: -100px;}
+#dialog .cj_2 .gitf{ width: 100%; height: 64px;  color: white; font-size: 14px; position: absolute; bottom: 30%; text-align: center; font-family: "微软雅黑";}
+#dialog .cj_2 .gitf p{ padding: 0; margin: 0;}
+#dialog .cj_2 .gitf p:nth-child(1){ color: yellow;}
+#dialog .cj_2 .gitf p:nth-child(3){ text-decoration: underline;}
+
+#dialog .cj_2 .gz{width: 200px; height: 40px; border-radius: 7px; background: #41bd43; color: white; font-size: 16px; margin: 0 auto; display: block; position: absolute; bottom: 46px; left: 50%; margin-left: -100px;}
+
+#dialog1{background: url(../img/b2.png) no-repeat; background-size: 100% 100%; box-sizing: border-box;  -webkit-box-sizing: border-box;}
+#dialog1 .inner{ height: 100%; width: 100%; text-align: center; font-size: 20px;}
+#dialog1 .inner .content{ padding-top: 50px;}
+#dialog1 .inner h3{ line-height: 60px; font-size: 40px;margin: 0; color: #321;}
+#dialog1 .inner .pause h3{color: #FFE2C5;}
+#dialog1 .inner .btn{ margin: 15px auto;}
+
+#dialog1 .inner p{ margin: 0;}
+#dialog1 .dia2{ width: 50px; height: 50px; border: 2px solid #B5B5B6; border-radius: 50%; background: url(../img/b1.png) no-repeat; background-size: 100% 100%; margin: 30px auto 0; position: relative; top: 5px;}
+
+#dialog1 .success{ width: 13.3rem; height: 4.2rem; margin: auto; background: url(../img/tzsb.png) no-repeat; background-size: 100% 100%;}
+#dialog1 .details{ width: 100%; text-align: center; font-weight: normal;}
+#dialog1 .details p{ font-size: 18px;}
+#dialog1 .details button{color: white; font-size: 16px; padding: 0; font-weight: normal; font-family:"微软雅黑"; border-radius: 7px; border: none; cursor: pointer;}
+#dialog1 .details .btn0{ width: 200px; height: 40px; background-color:darkorange;  display: block; margin: 0 auto;  }
+#dialog1 .details .btn1{ width: 90px; height: 40px; background-color:#16A903;  display: inline-block; margin: 5px;  }
+#dialog1 .details .btn2{ width: 90px; height: 40px; background-color:#16A903;  display: inline-block; margin: 5px;  }
+
+/*奖品*/
+#jp li{height: 110px; border: 2px solid white; margin-top: 10px; border-radius: 5px; position: relative;}
+#jp li .djqImgBox{ width: 35px; height: 32px; background: url(../img/dhj.png) no-repeat; background-size: 100%; position: absolute; left: 0; top: 0;}
+#jp li p{ margin: 0; padding: 0; height: 35px; text-indent:1.2em;}
+#jp li p:nth-child(3){ height:40px; border-bottom: 1px dashed white;}
+#jp li p.dh{ color: #ecb208;}
+
+
+
+
+
+

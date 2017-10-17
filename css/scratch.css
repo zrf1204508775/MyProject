@@ -1,0 +1,68 @@
+@charset "utf-8";
+*{ margin:0; padding:0; list-style:none; font-family:"微软雅黑";}
+a{ text-decoration:none;}
+input[type=button], input[type=submit], input[type=file], button { cursor: pointer; -webkit-appearance: none; outline:none;}
+img{ border:none;}
+body{ width:100%; height:100%; position:relative;}
+.scratch{width:100%; height:100%; overflow:hidden; overflow-y:scroll; position:absolute; left:0; top:0; background-color:#CE1131; }
+.my_photo{ width:100%; position:absolute; left:0; top:2%; text-align:center; font-size:14px; color:#CE1131;white-space: nowrap; overflow: hidden; text-overflow:ellipsis;}
+.my_photo p{ width:100%;}
+.my_photo img{ width:60px; height:60px; border-radius:50%; margin:0 auto; display: inline-block;}
+
+.surprised{ width:80%; height:260px; background:rgba(0,0,0,0.3); margin:10px auto; border-radius:10px; text-align:center; position:relative;}
+.cheer{ text-align:center; margin-top:15px ;margin-bottom:17px; color:#FFD957; font-size:14px;}
+.cheer span{ font-size:20px;}
+
+.co{width:100%; height:300px;  position:relative; left:0;}
+.dem{width:80%; height:300px; background:rgba(254,216,98,0.1); border-radius:10px; position:relative; left:10%;z-index:2;}
+.scratchpad{width:80%; height:120px; background:url(../img/it.png) no-repeat; background-size:100% 100%; margin:20px 0 0 10%; border-radius:10px; position:relative;}
+
+.dem p{ width:100%; text-align:center; font-size:12px; color:#FFD957; margin-top:12px;}
+.dem input{ width:70%; height:50px; border:none; background:#FFD957; position:absolute; left:15%; bottom:20%; border-radius:25px; font-size:18px; color:#CE1131; font-weight:bold;}
+.dem .ck{position:absolute; bottom:10%;}
+.scratchpad p{font-size:24px; color:#664215;}
+.scratchpad .fid{ width:60%; height:36px; line-height:36px; text-align:center; border-radius:18px; background:#CF1131; color:white; margin:0 auto; position:absolute; bottom:10px; left:20%;}
+
+.demo{width:80%; height:300px; background:rgba(254,216,98,0); border-radius:10px; position:relative; left:10%; top:-300px;}
+.demo p{ width:100%; text-align:center; font-size:12px; color:#FFD957; margin-top:12px; display:none;}
+.demo input{ width:70%; height:50px; border:none; background:#FFD957; position:absolute; left:15%; bottom:20%; border-radius:25px; font-size:18px; color:#CE1131; font-weight:bold;}
+.demo .ck{position:absolute; bottom:10%;}
+#scratchpad{width:80%; height:120px; background:#FFD957; margin:20px 0 0 10%; border-radius:10px;}
+#scratchpad div{width:100%; height:96px; border-radius:10px; background-size:100% 100%; text-align:center; color:#CE1131; padding-top:14px; font-size:13px;} 
+#scratchpad div span{ width:45%; text-align:right; font-size:50px; font-weight:bold; display:inline-block; height:66px; float:left;}
+#scratchpad div .ddb{width:46%; font-size:25px; line-height:66px; text-align:left; padding-left:4%;}
+#scratchpad div canvas{border-radius:10px; position:absolute; left:0; top:0;}
+.demo .dow{ display:inline-block; width:80%; height:106px; line-height:78px; text-align:center; position:absolute; left:10%; top:20px; border-radius:10px;}
+
+
+.scratch ul{ width:90%; margin:0 auto; text-align:left; }
+.scratch ul li{ width:100%; height:70px;}
+.scratch ul li img{ width:50px; height:50px; margin-top:10px; border-radius:5px; float:left;}
+.scratch ul li .name{ height:50px; margin-top:10px; float:left;}
+.scratch ul li .name p{ height:25px; line-height:25px; padding-left:10px; color:white; font-size:12px; }
+.scratch ul li .name p:last-child{ color:#ff7880;}
+.scratch ul li .number{ width:65px; height:50px; line-height:50px; margin-top:10px; float:right; color:#FFD957; font-size:16px; padding-left:30px}
+.scratch ul li .crit{ background:url(../img/icon_bj.png) no-repeat; background-size:26px 26px; background-position:left center;}
+
+
+.scratch .rule{ width:80%; margin:20px auto;}
+.scratch .rule p{ font-size:12px; color:#ff7880; line-height:25px;}
+.scratch .rule .first_1{ margin-top:10px;}
+
+.last{ width:100%; height:100%; background:rgba(0,0,0,0.8); position:absolute; left:0; top:0; text-align:center; display:none;}
+.last .colse{ width:15px; height:15px; position:absolute; right:6%; top:2%;}
+.last span{ display:inline-block; font-size:560%; color:#CE1131;}
+.last p{ color:#FFD957; font-size:14px; line-height:25px;}
+.last p span{ font-size:20px; font-weight:bold;}
+.last .nub{ display:inline-block; margin-top:15%;}
+.last input{ width:60%; height:50px; border:none; background:#FFD957; border-radius:10px; font-size:18px; color:#CE1131; font-weight:bold; position:absolute; left:20%; bottom:25%;}
+
+.messge{ width:100%; height:100%; position:absolute; top:0; left:0;  background:rgba(0,0,0,0.4); z-index:999; overflow:hidden; display:none;}
+.messge div{ width:70%; text-align:center; padding-top:40px; padding-bottom:70px; background:#069; border-radius:10px; position:absolute; left:15%; top:30%; background:#FFD957; color:#CD1837;}
+
+.messge p{ width:100%; height:30px; line-height:30px; position:absolute; left:0; bottom:0px; color:#fff; border-top:1px solid #9C0; background:#CD1837; border-radius:0 0 10px 10px ;}
+
+
+
+
+

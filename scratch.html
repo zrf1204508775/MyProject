@@ -1,0 +1,157 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta content="telephone=no" name="format-detection">
+	<meta content="email=no" name="format-detection">
+	<meta name="msapplication-tap-highlight" content="no">
+<title>我是大富翁</title>
+<link rel="stylesheet" href="css/scratch.css" type="text/css" />
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/wScratchPad.js"></script>
+<script type="text/javascript">
+window.onload=function(){
+	var oS=document.getElementById("scratchpad");
+	var w=oS.offsetWidth;
+	
+	
+	var useragent = window.navigator.userAgent.toLowerCase();
+	$("#scratchpad").wScratchPad({
+		
+		width:w,height:'120',color : "#a9a9a7",
+		scratchMove: function(e, percent)
+		{
+			if (useragent.indexOf("android 4") > 0)
+			{
+				
+				$("#scratchpad").css("color", "rgb(50,50,50)");
+				if ($("#scratchpad").css("color").indexOf("51") > 0) 
+				{
+				
+					$("#scratchpad").css("color", "rgb(50,50,50)");
+				} 
+				else if($("#scratchpad").css("color").indexOf("50") > 0) 
+				{
+					
+					$("#scratchpad").css("color", "rgb(51,51,51)");
+				}
+			}
+			if(percent > 50){
+				//$(".last").show();
+				this.clear();
+			}
+		},
+	});
+	$(".fid").click(function(){
+		$(".dem").css({"background":"rgba(254,216,98,0)","z-index":"0"});
+		$(".dem p").css({"display":"none"});
+		$(".demo").css({"background":"rgba(254,216,98,0.1)","z-index":"2"});
+		$(".demo p").css({"display":"block"});
+	});
+	$(".messge div p").click(function(){
+		$(".messge").hide();
+	});
+};
+</script>
+
+</head>
+
+<body>
+
+<div class="scratch">
+	<img src="img/my_shop1.png" width="100%"/>
+    <div class="my_photo">
+        <p><img src="img/6_3.png"/></p>
+        <p>天霸动霸cua</p>
+    </div>
+    <div class="cheer">为你的好友&nbsp;<span>静海</span>&nbsp;增加营业额</div>
+    <div class="co">
+        <div class="dem">
+            <div class="scratchpad" style="display:inline-block;">
+            	<p>刮开试试手气</p>
+                <div class="fid">帮好友抢铺</div>
+            </div>
+            <!--<span class="dow">刮开有惊喜</span>-->
+            <p>刮开有惊喜，看看你的手气如何？</p>
+            <a href="extension.html"><input type="button" value="我也抢铺" /></a>
+            <p class="ck">点击“我也抢铺”，赢取大红包</p>
+        </div>
+        <div id="demo" class="demo">
+            <div id="scratchpad" style="display:inline-block;"></div>
+            <!--<span class="dow">刮开有惊喜</span>-->
+            <p>为好友增加营业额，看看你的手气如何？</p>
+            <a href="extension.html"><input type="button" value="我也抢铺" /></a>
+            <p class="ck">点击“我也抢铺”，赢取大红包</p>
+        </div>
+    </div>
+    <img src="img/my_shop2.png" width="100%"/>
+    <ul>
+    	<li>
+        	<img src="img/6_3.png"/>
+            <div class="name">
+            	<p>天霸动霸cua</p>
+                <p>运气非常好运气非常好</p>
+            </div>
+            <div class="number crit"><span>5</span> 多多币</div>
+        </li>
+    	<li>
+        	<img src="img/6_3.png"/>
+            <div class="name">
+            	<p>天霸动霸cua</p>
+                <p>运气非常好</p>
+            </div>
+            <div class="number"><span>5</span> 多多币</div>
+        </li>
+    	<li>
+        	<img src="img/6_3.png"/>
+            <div class="name">
+            	<p>天霸动霸cua</p>
+                <p>运气非常好</p>
+            </div>
+            <div class="number"><span>5</span> 多多币</div>
+        </li>
+    	<li>
+        	<img src="img/6_3.png"/>
+            <div class="name">
+            	<p>天霸动霸cua</p>
+                <p>运气非常好</p>
+            </div>
+            <div class="number"><span>5</span> 多多币</div>
+        </li>
+    	<li>
+        	<img src="img/6_3.png"/>
+            <div class="name">
+            	<p>天霸动霸cua</p>
+                <p>运气非常好</p>
+            </div>
+            <div class="number"><span>5</span> 多多币</div>
+        </li>
+    </ul>
+    
+    <img src="img/rule.png" width="100%"/>
+    <div class="rule">
+        <p>街多多智慧商城新年“送铺”啦！赚多多币领取现金红包！想想都有点小激动呢！</p>
+        <p class="first_1">1.进入金山街多多智慧商城，点击“立即去抢”，便可随机获赠虚拟铺位的经营权。</p>
+        <p>2.在拥有经营权的时间内，可发动好友来逛铺，每个好友随机产生1~5个多多币的营收。</p>
+        <p>3.活动期间内，可随时兑换多多币，10多多币＝￥1，兑换成功将直接发放到您的微信上。</p>
+        <p>本活动最终解释权归街多多所有。</p>
+    </div>
+    
+</div>
+
+<div class="last">
+	<img class="colse" src="img/x_2.png"/>
+	<span class="nub">+5</span>
+    <p>你也太暴力了吧，把足球都踢爆了</p>
+    <p>赔 <span>5</span> 多多币！</p>
+    <a href="extension.html"><input type="button" value="我也抢铺" /></a>
+</div>
+<div class="messge">
+	<div>本活动最终解释权归街多多所有本活动最终解释权归街多多所有
+    	<p>好</p>
+    </div>
+</div>
+</body>
+</html>
